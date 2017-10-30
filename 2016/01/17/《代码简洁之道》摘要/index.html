@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>《代码简洁之道》摘要 | wildcreek</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/7.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">《代码简洁之道》摘要</h1><a id="logo" href="/.">wildcreek</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">《代码简洁之道》摘要</h1><div class="post-meta">Jan 17, 2016</div><div class="post-content"><pre><code>最近拜读了《代码简洁之道》，作为一名Android开发人员，针对Android开发中需要注意的问题作出简单摘要。
+</code></pre><h3 id="1-命名：使用有意义的命名"><a href="#1-命名：使用有意义的命名" class="headerlink" title="1.命名：使用有意义的命名"></a>1.命名：使用有意义的命名</h3><h3 id="2-函数："><a href="#2-函数：" class="headerlink" title="2.函数："></a>2.函数：</h3><ol>
+<li>函数尽量短小</li>
+<li>只做一件事</li>
+<li>参数尽量少；过多的参数可封装为对象</li>
+<li>使用异常代替错误码</li>
+<li>DRY原则：Don’t repeat yourself。</li>
+</ol>
+<h3 id="3-注释："><a href="#3-注释：" class="headerlink" title="3.注释："></a>3.注释：</h3><ol>
+<li>删除无用的注释</li>
+<li>尽量避免注释代码</li>
+</ol>
+<h3 id="4-格式："><a href="#4-格式：" class="headerlink" title="4.格式："></a>4.格式：</h3><ol>
+<li>经统计，大多开源项目源文件为200行内，一般不超过500行。</li>
+<li>函数一般按照自上而下的调用顺序排列。</li>
+<li>规范对齐和缩进。 </li>
+</ol>
+<h3 id="5-对象和数据结构："><a href="#5-对象和数据结构：" class="headerlink" title="5.对象和数据结构："></a>5.对象和数据结构：</h3><ol>
+<li>数据结构式代码：便于在不改动既有数据结构的前提下添加函数。</li>
+<li>面向对象式代码：便于在不改变既有函数的前提下添加新类。</li>
+<li>迪米特原则： 方法不应调用函数返回的对象的方法。 </li>
+</ol>
+<h3 id="6-错误处理："><a href="#6-错误处理：" class="headerlink" title="6.错误处理："></a>6.错误处理：</h3><ol>
+<li>使用异常而非返回码处理。</li>
+<li>使用 try-catch-finally 语句。</li>
+<li>自定义异常类。</li>
+<li>避免返回 null 值和传递 null 值以规避空指针异常，如利用<br>Collection.emptyList()返回空集合。 </li>
+</ol>
+<h3 id="7-单元测试："><a href="#7-单元测试：" class="headerlink" title="7.单元测试："></a>7.单元测试：</h3><ol>
+<li>TDD原则：Test-Driven-Development。</li>
+<li>测试代码要具备整洁性和可读性。</li>
+<li>First原则：fast ，independent ，repeatable，self-invalidating，<br>timely。（快速，独立，可重复，自足验证，及时）</li>
+</ol>
+<h3 id="8-类："><a href="#8-类：" class="headerlink" title="8.类："></a>8.类：</h3><ol>
+<li>类应该短小，高内聚，低耦合。</li>
+<li>SRP：单一责任原则。</li>
+<li>DIP :依赖倒置原则，类应该依赖于抽象而非具体。</li>
+</ol>
+<h3 id="9-系统："><a href="#9-系统：" class="headerlink" title="9.系统："></a>9.系统：</h3><ol>
+<li>系统的构建与使用区分。</li>
+<li>工厂模式。</li>
+<li>依赖注入。</li>
+<li>AOP:面向切面编程。<br>如Java代理模式：Proxy+InvocationHandler；<br>Java AOP框架Spring：反射+配置文件描述对象。</li>
+</ol>
+<h3 id="10-迭代："><a href="#10-迭代：" class="headerlink" title="10.迭代："></a>10.迭代：</h3><p>简单设计四原则：</p>
+<ol>
+<li>运行所有测试。</li>
+<li>重构：尽可能减少类和方法的数量。</li>
+<li>DRY，不可重复。</li>
+<li>表达力。</li>
+</ol>
+<h3 id="11-并发编程：（减少响应时间，增大吞吐量）"><a href="#11-并发编程：（减少响应时间，增大吞吐量）" class="headerlink" title="11.并发编程：（减少响应时间，增大吞吐量）"></a>11.并发编程：（减少响应时间，增大吞吐量）</h3><ol>
+<li>分离并发相关代码与其他代码。</li>
+<li>限制数据作用域，使用synchronized关键字。</li>
+<li>使用数据副本。</li>
+<li>线程相互独立。</li>
+<li>相关Java库：<br>5.1 concurrent包下Executor框架。<br>5.2 集合工具类：Collections.sychronizedXXX(List ,Map ,Set)。</li>
+</ol>
+</div><div class="tags"></div><div class="post-nav"><a href="/2016/07/18/Jenkins配置ant依赖问题/" class="pre">Jenkins配置ant依赖问题</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="https://wildcreek.github.io"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/10/12/Android开源SIP协议栈比较/">Android开源SIP协议栈比较</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/09/PJSIP2.7 Android版本编译及构建pjsua2和pjsua/">PJSIP2.7 Android版本编译及构建pjsua2和pjsua</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/09/Ubuntu14.0.4安装配置Kamailio5.0/">Ubuntu14.0.4安装配置Kamailio5.0</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/09/Kamailio glossary & misc(持续更新)/">Kamailio glossary & misc(持续更新)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/28/SIP proxy and SIP gateway/">SIP proxy and SIP gateway</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/18/Android Studio配置Gradle（包括signingConfigs、buildTypes和productFlavors等）/">Android Studio配置Gradle（包括signingConfigs、buildTypes和productFlavors等）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/17/Android实现基于试卷知识点的树形控件/">Android实现基于试卷知识点的树形控件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/17/Android实现选择题答题（包括单选、多选和答题卡）/">Android实现选择题答题（包括单选、多选和答题卡）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/17/Android调用startForeground 但不显示通知/">Android调用startForeground 但不显示通知</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/17/Android应用启动黑屏、白屏解决方法/">Android应用启动黑屏、白屏解决方法</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2017 <a href="/." rel="nofollow">wildcreek.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.1.20/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
